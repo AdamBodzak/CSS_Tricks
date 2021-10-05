@@ -1,0 +1,56 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e1538;
+  font-weight: 700;
+  font-size: 80px;
+}
+
+.border {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 23px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.border:before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(#00ccff, #d400d4);
+  animation: anime linear 5s infinite;
+}
+
+@keyframes anime {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.paragraph {
+  position: relative;
+  z-index: 10;
+  color: white;
+  margin: 3px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 1);
+}
